@@ -6,3 +6,12 @@ JS is dynamically typed language.
 
 ##Reference (Non-Primitive)
   Array, Objects, Functions
+
+
+##MEMORY
+
+Stack (Primitive)
+-copy of original data given.
+
+Heap (Reference)
+-reference to original data given.
