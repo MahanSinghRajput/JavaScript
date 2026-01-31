@@ -1,0 +1,8 @@
+JS is dynamically typed language.
+##Primitive
+  Primitive datatypes are call by value.
+  Reference to original data is not given, copy of original data is given and we make changes in the copy.
+  String, Number, Boolean, null, undefined, Symbol, BigInt
+
+##Reference (Non-Primitive)
+  Array, Objects, Functions
