@@ -18,3 +18,24 @@ console.log(id1)
 console.log(id2)
 console.log(id1 == id2)
 console.log(id1 === id2)
+
+
+//stack 
+let name = "abc"
+let anotherName = name
+anotherName = "bcd"
+console.log(anotherName);
+console.log(name);
+
+//heap
+let user = {
+    email: "user@email.com",
+    upi: "user@upi"
+}
+let anotherUser = user
+anotherUser.email = "anotherUser@email.com"
+console.log(user.email);
+console.log(anotherUser.email)
+
+//in heap changing values in one object also changes value for other as both are referencing to the same object.
+//whereas in Stack a copy is made hence change in any one doesn't reflect on another.
