@@ -35,5 +35,12 @@ const myCoding = [
 
 myCoding.forEach( (item) => {
     
-    console.log(item.languageName);
+    //console.log(item.languageName);
 } )
+
+//forEach doesnt return an value
+const myArr = coding.forEach((item) => {
+    console.log(item) //this prints the items
+    return item //whether you return anything or not, forEach never returns any value hence myArr will always contain undefined
+})
+console.log(myArr)
