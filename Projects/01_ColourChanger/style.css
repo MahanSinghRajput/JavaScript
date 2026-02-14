@@ -1,0 +1,56 @@
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+/* Container */
+.canvas {
+    margin: 100px auto;
+    width: 80%;
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Color buttons */
+.button {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* Individual colors */
+#grey {
+    background-color: grey;
+}
+
+#white {
+    background-color: white;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+/* Instruction text */
+h2 {
+    margin-top: 20px;
+    font-size: 18px;
+}
