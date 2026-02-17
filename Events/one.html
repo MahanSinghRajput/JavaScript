@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h1>list</h1>
+    <ul>
+        <li>abc</li>
+        <li onclick="alert('def')">def</li> <!-- This approach of calling event is not good if you want to scale-->
+        <li id = 'example'>ghi</li>
+    </ul>
+</body>
+<script>
+    //better approach
+    document.getElementById('example').onclick = function(){
+        alert('ghi')
+    }
+
+</script>
+</html>
