@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <button id="hey">Click</button>
+</body>
+<script>
+    setTimeout(function(){
+        //alert("hey")
+    }, 2000) //not part of core JS, comes through some api
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "this is changed"
+    }
+    const change = setTimeout(changeText, 3000)
+
+    document.querySelector('#hey').addEventListener('click',function(){
+        clearTimeout(change)
+        alert('stopped')
+    })
+
+</script>
+</html>
