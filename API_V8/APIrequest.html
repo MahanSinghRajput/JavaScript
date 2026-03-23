@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style = "background-color: #212121;">
+    Something Something
+</body>
+<script>
+    const requestURL = "https://api.github.com/users/MahanSinghRajput"
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', requestURL)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState)
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText)
+            //you get string as output from an URL hence we converted it
+            console.log(data.followers)
+        }
+    } //for continuous track
+    xhr.send() //call made
+</script>
+</html>
