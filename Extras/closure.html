@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <button id = "orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    //closure
+    function outer(){
+        let name = "abc"
+        //inner can access the variables of outer function
+        function inner(){
+            console.log(name)
+        }
+        inner()
+    }
+    outer()
+
+    //lexical scoping
+    //complete reference to the memory is returned, myFun has the complete reference and complete makeFun functions access
+    function makeFun(){
+        const name = "abc"
+        function displayName(){
+            cosole.log(name)
+        }
+        //lexical scope is returned
+        return displayName
+    }
+    const myFun = makeFun()
+    myFun()
+</script>
+<script>
+    //real life example
+    // document.getElementById('orange').onclick = function(){
+    //     document.body.style.backgroundColor = `orange`
+    // }
+    // document.getElementById('green').onclick = function(){
+    //     document.body.style.backgroundColor = `green`
+    // }
+
+    //when you need to add 100 such buttons it will become time taking
+    //instead use-
+    // function colorHandler(color){
+    //     document.body.style.backgroundColor = `${color}`
+    // }
+    // document.getElementById('orange').onclick = colorHandler("orange")
+    //but this method is not suitable as the function colorHandler is called directly and changes the background colour without the button being clicked.
+
+    //so we need to use -
+    function colorHandler(color){
+        //now this will work
+        return function(){
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+    document.getElementById('orange').onclick = colorHandler("orange")
+    document.getElementById('green').onclick = colorHandler("green")
+
+</script>
+</html>
