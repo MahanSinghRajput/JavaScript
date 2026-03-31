@@ -1,3 +1,4 @@
+//class based getter setter
 class User{
     constructor(email, password){
         this.email = email
@@ -21,6 +22,7 @@ const abc = new User("abc@e.com", "123abc")
 console.log(abc.password)
 
 
+
 //getter setter using properties (old methods)
 function User(email, password){
     this._email = email
@@ -36,3 +38,22 @@ function User(email, password){
         }
     })
 }
+
+
+
+//object based getter setter
+const User = {
+    _email: "abc@abc.com",
+    _password: "abc123",
+
+    get email(){
+        return this._email.toUpperCase()
+    },
+    set email(value){
+        this._email = value
+    }
+}
+
+//factory
+const tea = Object.create(User)
+console.log(tea.email)
